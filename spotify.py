@@ -7,9 +7,12 @@ import re
 import sys
 
 
-//Many thanks to Grant Curell over at https://www.codeproject.com/articles/873060/python-search-youtube-for-video
+//Many thanks to Grant Curell over at
+//https://www.codeproject.com/articles/873060/python-search-youtube-for-video
 //All I had to do was switch it over to Python2
-//just had to switch to import urllib (urllib is split in three for Python3), and add the "utf8" in the .decode()
+//just had to switch to import urllib (urllib is split in three for Python3),
+//and add the "utf8" in the .decode()
+
 def getUrl(query):
     query_string = urllib.urlencode({"search_query" : query})
     print query_string
@@ -17,9 +20,7 @@ def getUrl(query):
     search_results = re.findall((r'href=\"\/watch\?v=(.{11})'), html_content.read().decode("utf8"))
     print "http://www.youtube.com/watch?v=" + search_results[0]
 
-
-
-
+//#############################################################################
 scope = 'user-library-read'
 if len(sys.argv) > 1:
     username = sys.argv[1]
