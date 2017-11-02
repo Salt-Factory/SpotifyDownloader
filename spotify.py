@@ -28,7 +28,7 @@ else:
     print "Usage: %s username" % (sys.argv[0],)
     sys.exit()
 
-token = util.prompt_for_user_token(username,scope,client_id='479fdd89bbf24dba9ce84355fc159ba7',client_secret='7538d37645184848868496703eed4b18',redirect_uri='http://localhost/')
+token = util.prompt_for_user_token(username,scope,client_id='ADD IN ID',client_secret='ADD IN SECRET',redirect_uri='http://localhost/')
 
 if token:
     sp = spotipy.Spotify(auth=token)
